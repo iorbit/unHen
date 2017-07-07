@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "no hen",
+  "description": "This extension will replace the word 'hen' with 'vederbörande'",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.2.1.min.js","content.js"]
+    }
+  ],
+  "permissions": [
+   "activeTab"
+   ]
+}
